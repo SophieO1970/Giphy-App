@@ -1,0 +1,10 @@
+.col-md-3 {
+    height: 50vh;
+    margin-bottom: 10px;
+  }
+  
+  img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }

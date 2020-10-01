@@ -1,7 +1,7 @@
 <app-search-form (passSearchTerm)="searchGifs($event)"></app-search-form>
 
 <div class="row">
-  <div *ngFor="let gif of gifs" class="col">
+  <div *ngFor="let gif of gifs" class="col-md-3">
     <img src="{{ gif.imagePath }}" alt="" />
   </div>
 </div>
