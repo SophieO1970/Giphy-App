@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Gif} from '../gif';
 import { TrendingService} from '../trending-service/trending.service';
-import { SearchService} from '../search-service/search.service'
+import { SearchService} from '../search-service/search.service';
 
 @Component({
   selector: 'app-gif',
@@ -11,8 +11,9 @@ import { SearchService} from '../search-service/search.service'
 export class GifComponent implements OnInit {
   gifs: Gif[];
 
+  constructor(public trendingService: TrendingService, public searchService: SearchService) {}
 
-  constructor() { }
+
 
   ngOnInit(): void {
   }
