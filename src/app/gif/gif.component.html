@@ -1,1 +1,7 @@
-<p>gif works!</p>
+<app-search-form (passSearchTerm)="searchGifs($event)"></app-search-form>
+
+<div class="row">
+  <div *ngFor="let gif of gifs" class="col">
+    <img src="{{ gif.imagePath }}" alt="" />
+  </div>
+</div>
