@@ -21,9 +21,7 @@ export class GifComponent implements OnInit {
 
   getTrending(){
     this.trendingService.fetchTrendingGifs().then(
-      () => {
-        this.gifs = this.trendingService.gifs;
-      },
+      () => { this.gifs = this.trendingService.gifs;},
       (error) => {
         console.log(error);
       }
@@ -32,9 +30,7 @@ export class GifComponent implements OnInit {
 
   searchGifs(term: string){
     this.searchService.searchGifs(term).then(
-      () => {
-        this.gifs = this.searchService.gifs;
-      },
+      () => { this.gifs = this.searchService.gifs;},
       (error) => {
         console.log(error);
       }
