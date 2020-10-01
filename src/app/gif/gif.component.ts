@@ -16,6 +16,29 @@ export class GifComponent implements OnInit {
 
 
   ngOnInit(): void {
+    this.getTrending();
+  }
+
+  getTrending(){
+    this.trendingService.fetchTrendingGifs().then(
+      () => {
+        this.gifs = this.trendingService.gifs;
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
+  }
+
+  searchGifs(term: string){
+    this.searchService.searchGifs(term).then(
+      () => {
+        this.gifs = this.searchService.gifs;
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
   }
 
 }
