@@ -4,11 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GifComponent } from './gif/gif.component';
+import { SearchFormComponent } from './search-form/search-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    GifComponent
+    GifComponent,
+    SearchFormComponent
   ],
   imports: [
     BrowserModule,
