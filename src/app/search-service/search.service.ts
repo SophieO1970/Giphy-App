@@ -11,7 +11,7 @@ export class SearchService {
 
 searchGifs(term: string) {
   let endPoint=
-  `https://api.giphy.com/v1/gifs/search?api_key=${environment.apiKey}&q${term}=&limit=25&offset=0&rating=g&lang=en`
+  `https://api.giphy.com/v1/gifs/search?api_key=${environment.apiKey}&q${term}=&limit=25&offset=0&rating=g&lang=en`;
   let promise = new Promise((resolve, reject) => {
     this.gifs = [];
     this.http
