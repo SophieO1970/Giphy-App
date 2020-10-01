@@ -120,5 +120,8 @@
         }
       }
     }},
-  "defaultProject": "Gifs"
+  "defaultProject": "Gifs",
+  "cli": {
+    "analytics": false
+  }
 }

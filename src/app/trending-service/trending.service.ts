@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Gif } from '../gif';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +11,7 @@ export class TrendingService {
 
   fetchTrendingGifs() {
     let endPoint =
-    `https://api.giphy.com/v1/gifs/trending?api_key=PzJepCuq92wLXRMbCEMEysLCyzibTIsC&limit=25&rating=g`;
+    `https://api.giphy.com/v1/gifs/trending?api_key=${environment.apiKey}&limit=25&rating=g`;
     let promise = new Promise((resolve, reject) => {
       this.gifs = [];
       this.http
@@ -31,9 +32,9 @@ export class TrendingService {
     });
     return promise;
   }
-
+  constructor(private http: HttpClient) {}
   }
 
 
-  constructor(private http: HttpClient) {}
-}
+  
+
